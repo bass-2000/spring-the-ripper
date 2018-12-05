@@ -1,0 +1,23 @@
+plugins {
+    id "org.springframework.boot" version "1.5.3.RELEASE"
+}
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-loader'
+    compileOnly 'org.projectlombok:lombok'
+    compileOnly 'org.springframework.boot:spring-boot-configuration-processor'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+compileJava.dependsOn(processResources)
+
+springBoot {
+    executable = true
+}

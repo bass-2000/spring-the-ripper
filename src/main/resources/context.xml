@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="ru.bass2000.ripper.quoters.TerminatorQuoter" id="terminatorQuoter">
+        <property name="message" value="I'll be back"/>
+    </bean>
+
+    <bean class="ru.bass2000.ripper.quoters.InjectRandomIntAnnotationBeanPostProcessor"/>
+
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+    <bean class="ru.bass2000.ripper.quoters.ProfilingHandlerBeanPostProcessor"/>
+
+    <bean class="ru.bass2000.ripper.quoters.PostProxyInvokerContextListener"/>
+
+    <bean class="ru.bass2000.ripper.quoters.DeprecationHanglerBeanFactoryPostProcessor"/>
+
+</beans>
